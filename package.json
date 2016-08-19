@@ -1,0 +1,53 @@
+{
+  "name": "nodestartup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development supervisor --ignore build/ -e js,coffee,jade,css,scss -exec node -r babel-register backend/src/server & NODE_ENV=development node hotLoadServer.js",
+    "dev:es6": "NODE_ENV=development supervisor --ignore build/ -e js,coffee,jade,css,scss backend/src/serverES6 & NODE_ENV=development node hotLoadServer.js",
+    "start": "NODE_ENV=production node backend/src/serverES6",
+    "build": "NODE_ENV=production webpack -p --progress --colors"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.11.6",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.7.1",
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "jade": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "supervisor": "^0.11.0"
+  },
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "css-loader": "^0.23.1",
+    "expose-loader": "^0.7.1",
+    "file-loader": "^0.9.0",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-mocha": "^1.1.1",
+    "mocha": "^3.0.2",
+    "open": "0.0.5",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
