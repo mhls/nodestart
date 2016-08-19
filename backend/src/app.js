@@ -1,12 +1,12 @@
 import express from 'express';
 
-var routes = require('./routes/index');
+import routes from './routes/index';
 
-var cors = require('cors'); // cross port commuication
-var bodyParser = require('body-parser');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var flash = require('connect-flash'); // for flash messages
+import cors from 'cors'; // cross port commuication
+import bodyParser from 'body-parser';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import flash from 'connect-flash'; // for flash messages
 
 var app = express();
 
